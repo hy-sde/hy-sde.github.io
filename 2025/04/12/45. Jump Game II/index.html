@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>45. Jump Game II | Hexo</title>
+  <meta name="keywords" content=" leetcode ">
+  <meta name="description" content="45. Jump Game II | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="sol     class Solution &#123;         public int jump(int[] nums) &#123;                          int arrayLength &#x3D; nums.length;                          int[] minJumps &#x3D; new int[arrayLength];">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -249,18 +249,56 @@
 
     </div>
     <div class="hide-list">
-        <div class="semicircle" data-title="切换全屏 快捷键 s">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-45. Jump Game II" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Just-mind-dump"><span class="toc-text">Just mind dump!</span></a></li></ol></li></ol>
+        <h1 class="article-title">45. Jump Game II</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">leetcode</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-04-12 16:18:55'>2025-04-12 14:43</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
     
 <style>
     .left-col .switch-btn,
@@ -273,10 +311,50 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="Just-mind-dump"><a href="#Just-mind-dump" class="headerlink" title="Just mind dump!"></a>Just mind dump!</h2>
-        </article>
-        
-        
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>sol <pre><code>    class Solution &#123;
+        public int jump(int[] nums) &#123;
+            
+            int arrayLength = nums.length;
+            
+            int[] minJumps = new int[arrayLength];
+            Arrays.fill(minJumps, Integer.MAX_VALUE);
+            minJumps[0] = 0;
+            
+            for (int currentIndex = 1; currentIndex &lt; arrayLength; currentIndex++) &#123;
+                for (int previousIndex = 0; previousIndex &lt; currentIndex; previousIndex++) &#123;
+                    if (nums[previousIndex] + previousIndex &gt;= currentIndex) &#123;
+                        minJumps[currentIndex] = Math.min(minJumps[previousIndex] + 1, minJumps[currentIndex]);
+                    &#125;
+                &#125;
+            &#125;
+            
+            return minJumps[arrayLength - 1];
+        &#125;
+    &#125;
+</code></pre>
+</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> All rights reserved. </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -285,11 +363,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

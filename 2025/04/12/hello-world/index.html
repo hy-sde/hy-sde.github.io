@@ -6,16 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="Hello World | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Here’s my linkedIn: https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hui-yang-3b5482a1&#x2F;">
+<meta name="description" content="sol     class Solution &#123;         public int jump(int[] nums) &#123;                          int arrayLength &#x3D; nums.length;                          int[] minJumps &#x3D; new int[arrayLength];">
 <meta property="og:type" content="article">
-<meta property="og:title" content="About me">
-<meta property="og:url" content="http://example.com/2025/04/12/about/index.html">
+<meta property="og:title" content="45. Jump Game II">
+<meta property="og:url" content="http://example.com/2025/04/12/45.%20Jump%20Game%20II/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Here’s my linkedIn: https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hui-yang-3b5482a1&#x2F;">
+<meta property="og:description" content="sol     class Solution &#123;         public int jump(int[] nums) &#123;                          int arrayLength &#x3D; nums.length;                          int[] minJumps &#x3D; new int[arrayLength];">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-04-12T21:43:41.000Z">
-<meta property="article:modified_time" content="2025-04-12T23:03:03.828Z">
+<meta property="article:modified_time" content="2025-04-12T23:18:55.131Z">
 <meta property="article:author" content="Hui Yang">
+<meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
 
 
@@ -123,7 +124,7 @@
     <li>
         <div class="all active" data-rel="All">All
             
-                <small>(3)</small>
+                <small>(4)</small>
             
         </div>
     </li>
@@ -139,7 +140,7 @@
         
             <a class="about  hasFriend  site_url"
                
-               href="/about">About</a>
+               href="/2025/04/12/about/">About</a>
         
         <a style="width: 50%"
                 
@@ -147,7 +148,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_posts_number" value="4">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -191,12 +192,25 @@
     <input id="tag-search" />
     <div class="tag-wrapper">
         
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>leetcode</a>
+            </li>
+        
     </div>
 
 </div>
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="All "
+           href="/2025/04/12/45.%20Jump%20Game%20II/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="45. Jump Game II">45. Jump Game II</span>
+            <span class="post-date" title="2025-04-12 14:43:41">2025/04/12</span>
+        </a>
         
         
         <a  class="All "
@@ -294,17 +308,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="language-bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="language-bash">$ hexo server
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="language-bash">$ hexo generate
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="language-bash">$ hexo deploy
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
@@ -312,10 +326,6 @@
     </div>
 </article>
 
-
-<p>
-    <a  class="dashang" onclick="dashangToggle()">💰</a>
-</p>
 
 
 
@@ -342,24 +352,6 @@
     </div>
 </div>
 
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close"  onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>Help us with donation</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
-        </div>
-    </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
-    </div>
-</div>
-
-
 </body>
 <script src="/js/jquery.pjax.js?v=1.1.0" ></script>
 
@@ -373,14 +365,6 @@
         
 
         /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
         
 
         /*高亮代码块行号*/
@@ -399,11 +383,6 @@
     }
 
     /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
     
 
 </script>
@@ -488,6 +467,16 @@
     /*文章列表背景图*/
     
 
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 
