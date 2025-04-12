@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>45. Jump Game II | Hui&#39;s Personal blog</title>
+  <title>322. Coin Change | Hui&#39;s Personal blog</title>
   <meta name="keywords" content=" leetcode ">
-  <meta name="description" content="45. Jump Game II | Hui&#39;s Personal blog">
+  <meta name="description" content="322. Coin Change | Hui&#39;s Personal blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="sol     import java.util.Arrays;      public class Solution &#123;         public int coinChange(int[] coins, int amount) &#123;             int[] dp &#x3D; new int[amount + 1];             Arrays.fill(dp">
 <meta property="og:type" content="article">
@@ -266,9 +266,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-45. Jump Game II" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-322. Coin Change" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">45. Jump Game II</h1>
+        <h1 class="article-title">322. Coin Change</h1>
     
     <div class="article-meta">
         
@@ -285,7 +285,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2025-04-12 16:18:55'>2025-04-12 14:43</time>
+            Created At : <time class="date" title='Updated At: 2025-04-12 16:37:12'>2025-04-12 14:43</time>
         
     </div>
     <div class="article-meta">
@@ -324,24 +324,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>sol <pre><code>    class Solution &#123;
-        public int jump(int[] nums) &#123;
+<li>sol <pre><code>    import java.util.Arrays;
+
+    public class Solution &#123;
+        public int coinChange(int[] coins, int amount) &#123;
+            int[] dp = new int[amount + 1];
+            Arrays.fill(dp, amount + 1);
+            dp[0] = 0;
             
-            int arrayLength = nums.length;
-            
-            int[] minJumps = new int[arrayLength];
-            Arrays.fill(minJumps, Integer.MAX_VALUE);
-            minJumps[0] = 0;
-            
-            for (int currentIndex = 1; currentIndex &lt; arrayLength; currentIndex++) &#123;
-                for (int previousIndex = 0; previousIndex &lt; currentIndex; previousIndex++) &#123;
-                    if (nums[previousIndex] + previousIndex &gt;= currentIndex) &#123;
-                        minJumps[currentIndex] = Math.min(minJumps[previousIndex] + 1, minJumps[currentIndex]);
+            for (int i = 1; i &lt;= amount; i++) &#123;
+                for (int coin : coins) &#123;
+                    if (coin &lt;= i) &#123;
+                        dp[i] = Math.min(dp[i], dp[i - coin] + 1);
                     &#125;
                 &#125;
             &#125;
             
-            return minJumps[arrayLength - 1];
+            return dp[amount] &gt; amount ? -1 : dp[amount];
         &#125;
     &#125;
 </code></pre>
