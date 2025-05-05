@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>253. Meeting Rooms II | Hui&#39;s Personal blog</title>
-  <meta name="keywords" content=" leetcode ">
-  <meta name="description" content="253. Meeting Rooms II | Hui&#39;s Personal blog">
+  <title>CodeMagic for app dev flow | Hui&#39;s Personal blog</title>
+  <meta name="keywords" content=" Startup ">
+  <meta name="description" content="CodeMagic for app dev flow | Hui&#39;s Personal blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="this doc  is a good start but it’s missing lots of details, the video  is more helpful but some parts are out dated. In my specific use case, I don’t need firebase and I’m using flutter as the fronte">
 <meta property="og:type" content="article">
@@ -585,9 +585,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-253. Meeting Rooms II" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CodeMagic for app dev flow" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">253. Meeting Rooms II</h1>
+        <h1 class="article-title">CodeMagic for app dev flow</h1>
     
     <div class="article-meta">
         
@@ -597,7 +597,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="leetcode">leetcode</a>
+            <a  data-rel="Startup">Startup</a>
             
         </span>
         
@@ -605,14 +605,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">leetcode</a>
+            <a class="color3">Startup</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2025-05-04 16:07:01'>2025-04-12 14:43</time>
+            Created At : <time class="date" title='Updated At: 2025-05-04 22:29:53'>2025-05-04 14:43</time>
         
     </div>
     <div class="article-meta">
@@ -640,41 +640,37 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>analysis<pre><code>    /*
-        [[0,30],[5,10],[15,20]]
-        0 -             30
-        5 - 10  15 -20
-        
-        0  5  15
-        30 10 20
-    */
-</code></pre>
+<li><p>Before hearing code magic, I used to use github action to deploy backend services or web app. After trying with it, I found it’s a really helpful tool for mobile app CICD. It removes the need to use firebase. Using it with flutter enables fast CICD for startup app dev.</p>
+<ul>
+<li><img src="/../img/pic-3.png" alt="Pic 3"></li>
+</ul>
 </li>
-<li>sol<pre><code>    class Solution &#123;
-        public int minMeetingRooms(int[][] intervals) &#123;
-            
-            int len = intervals.length;
-            int [] start = new int[len];
-            int [] end = new int[len];
-            int i =0;
-            for(int i = 0; i &lt; len; i++)&#123;
-                start[i] = intervals[i][0];
-                end[i] = intervals[i][1];
-            &#125;
-
-            int endPos = 0;
-            int rooms = 0;
-            for(int i = 0; i &lt; len; i++)&#123;
-                if(start[i] &lt; end[endPos])&#123;// curr meet not eneded yet, new one starts
-                    rooms++;
-                &#125;else&#123;
-                    endPos++;
-                &#125;
-            &#125;
-            return rooms;
-        &#125;
-    &#125;
-</code></pre>
+<li><p>pre-requisites:</p>
+<ul>
+<li>1, apple account</li>
+<li>2, code magic account</li>
+<li>3, github account</li>
+</ul>
+</li>
+<li><p>Steps:</p>
+<ul>
+<li>option one is to have single app with feature flags for env separation</li>
+<li>option two is have different apps for different envs (shown by different apple bundle Ids)<ul>
+<li>we can </li>
+<li>1, suffix the app bundle Ids with different env e.g com.sample.app.dev, com.sample.app.staging, com.sample.app, </li>
+<li>2, then in main entry of flutter code, pass in flavor as build arg to build </li>
+<li>3, each env is essentially talking to a set of api endpoints specific to that env</li>
+<li>4, we can also change launch.json for vscode to enable local app pointing to different endpoints</li>
+<li>5, then on code magic, we have different workflow for each env</li>
+<li>6, for internal testing, we need to have the beta test account prepared first, app store connect setup and TestFlight integration setup, then each build can be auto distribute to either internal user group ( who ends with same org email) or external user group(who added by admin manually)<ul>
+<li>need to be mindful to setup the capabilites etc from apple dev dashboard</li>
+<li>decide wheter we want to create share extension for utility</li>
+</ul>
+</li>
+<li>7, for prod, there’s a last app review step,  Apple reviewer will login the account to try the app.</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
